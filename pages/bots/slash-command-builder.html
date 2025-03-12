@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slash Command Builder - BOT_ID</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Slash Command Builder for BOT_ID</h1>
+        <p>Create and customize slash commands for your bot.</p>
+    </header>
+    <main>
+        <section class="command-builder">
+            <h2>Build a Slash Command</h2>
+            <form id="commandBuilderForm">
+                <label for="commandName">Command Name:</label>
+                <input type="text" id="commandName" name="commandName" placeholder="Enter command name" required>
+
+                <label for="commandDescription">Command Description:</label>
+                <textarea id="commandDescription" name="commandDescription" placeholder="Enter command description" required></textarea>
+
+                <label for="commandOptions">Command Options (JSON):</label>
+                <textarea id="commandOptions" name="commandOptions" placeholder='Enter options as JSON, e.g., [{"name": "option1", "type": "string"}]' required></textarea>
+
+                <button type="submit">Create Command</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Dinosaur Bot Maker. All rights reserved.</p>
+    </footer>
+
+    <script src="command-builder.js"></script>
+</body>
+</html>
