@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Settings - BOT_ID</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bot Settings for BOT_ID</h1>
+        <p>Customize your bot's appearance and behavior.</p>
+    </header>
+    <main>
+        <section class="settings">
+            <h2>Settings</h2>
+            <form id="botSettingsForm">
+                <label for="botIcon">Bot Icon URL:</label>
+                <input type="url" id="botIcon" name="botIcon" placeholder="Enter image URL" required>
+
+                <label for="botName">Bot Name:</label>
+                <input type="text" id="botName" name="botName" placeholder="Enter bot name" required>
+
+                <label for="botDescription">Bot Description:</label>
+                <textarea id="botDescription" name="botDescription" placeholder="Enter bot description" required></textarea>
+
+                <label for="botToken">Bot Token:</label>
+                <input type="text" id="botToken" name="botToken" placeholder="Enter bot token" required>
+
+                <label for="botActivity">Bot Activity:</label>
+                <input type="text" id="botActivity" name="botActivity" placeholder="Enter bot activity" required>
+
+                <button type="submit">Save Changes</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Dinosaur Bot Maker. All rights reserved.</p>
+    </footer>
+
+    <script src="settings.js"></script>
+</body>
+</html>
