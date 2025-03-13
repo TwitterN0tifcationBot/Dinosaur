@@ -3,35 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Started with Dinosaur</title>
+    <title>Discord Bot Maker</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <button id="getStartedBtn">Get Started</button>
-        <h1>Welcome to Dinosaur</h1>
-        <p>Your Jurassic Journey to Creating Discord Bots Without Coding!</p>
-    </header>
-    <main>
-        <section class="intro">
-            <h2>Get Started</h2>
-            <p>Unleash your creativity and build powerful Discord bots with ease. No coding required!</p>
-            <button onclick="window.location.href='signup.html'">Start Now</button>
-        </section>
-        <section class="features">
-            <h2>Features</h2>
-            <ul>
-                <li>Easy-to-use Interface</li>
-                <li>Customizable Bot Commands</li>
-                <li>24/7 Support</li>
-                <li>And much more!</li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2023 Dinosaur Bot Maker. All rights reserved.</p>
-    </footer>
+    <h1>Discord Bot Maker</h1>
+    <form id="botForm">
+        <label for="botName">Bot Name:</label>
+        <input type="text" id="botName" name="botName" required>
+        
+        <label for="botDescription">Description:</label>
+        <input type="text" id="botDescription" name="botDescription" required>
+        
+        <label for="botPrefix">Command Prefix:</label>
+        <input type="text" id="botPrefix" name="botPrefix" value="!" required>
+        
+        <button type="submit">Generate Bot Configuration</button>
+    </form>
+    <div id="output"></div>
 
-    <script src="script.js"></script>
+    <script>
+        document.getElementById('botForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const botName = document.getElementById('botName').value;
+            const botDescription = document.getElementById('botDescription').value;
+            const botPrefix = document.getElementById('botPrefix').value;
+
+            const output = `
+                <h2>Bot Configuration</h2>
+                <p><strong>Name:</strong> ${botName}</p>
+                <p><strong>Description:</strong> ${botDescription}</p>
+                <p><strong>Command Prefix:</strong> ${botPrefix}</p>
+            `;
+            document.getElementById('output').innerHTML = output;
+        });
+    </script>
 </body>
 </html>
